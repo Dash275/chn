@@ -17,4 +17,9 @@ function dealer_report($dealer, $month) {
         $order = "sold_date", $wheretwo, $whereargtwo, $wheretotwo);
     return $call; }
 
+function dealer_info($dealer) {
+    $call = select("*", "dealers", $where = "dealer_id", $wherearg = "=",
+        $whereto = $dealer);
+    return $call; }
+
 ?>

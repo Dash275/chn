@@ -14,6 +14,17 @@ else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $dealer = $_POST['dealer'];
         $month = $_POST['month'];
         $call = dealer_report($dealer, $month);
+        $info = dealer_info($dealer);
+        $info = $info->fetch_array(MYSQLI_ASSOC);
+
+        echo "<h1>" . $info['dealer_initials'] . $info['dealer_id'] .
+            $info['dealer_class'] . "</h1>";
+        echo "<h3>" . $info['dealer_fname'] . " " . $info['dealer_lname'];
+        echo "<br>" . $info['dealer_street'];
+        echo "<br>" . $info['dealer_city'] . " " . $info['dealer_state'];
+        echo "<br><br>" . $info['dealer_phone'];
+        echo "<br>" . $info['dealer_email'] . "<br></h3>";
+
         echo "<table border='1'>";
         echo "<tr>";
 
@@ -40,15 +51,15 @@ else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "<td>" . $row['sale_note']     . "</td>";
             echo "<td>" . $row['item_ask']      . "</td>";
             echo "<td>" . $row['item_price']    . "</td>";
-            echo "<td>" . $row['dealer_split']  . "</td>";
+            echo "<td>" . number_format($row['dealer_earn'], 2)  . "</td>";
 
-            $to_dealer += $row['dealer_split'];
+            $to_dealer += number_format($row['dealer_earn'], 2);
 
             echo "</tr>"; }
 
         echo "</table>";
 
-        echo "To dealer: \$$to_dealer"; }
+        echo "To dealer: \$" . number_format($to_dealer, 2); }
     else {
         echo "You must supply a number and month."; } }
 else {
