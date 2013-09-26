@@ -2,7 +2,7 @@
 
 <?php
 
-function dealer_report($dealer, $month) {
+function sales_report($dealer, $month) {
     $range = DateTime::createFromFormat('Y-m', $month);
     $range = $range->format('Y-m');
     $range = $range . "-%";
@@ -10,11 +10,15 @@ function dealer_report($dealer, $month) {
     $where = "sold_date";
     $wherearg = "LIKE";
     $whereto = "'" . $range . "'";
-    $wheretwo = "dealer_id";
-    $whereargtwo = "=";
-    $wheretotwo = "'" . $dealer . "'";
-    $call = select("*", $table, $where, $wherearg, $whereto,
-        $order = "sold_date", $wheretwo, $whereargtwo, $wheretotwo);
+    if ($dealer) {
+        $wheretwo = "dealer_id";
+        $whereargtwo = "=";
+        $wheretotwo = "'" . $dealer . "'";
+        $call = select("*", $table, $where, $wherearg, $whereto,
+            $order = "sold_date", $wheretwo, $whereargtwo, $wheretotwo); }
+    else {
+        $call = select("*", $table, $where, $wherearg, $whereto,
+            $order = "sold_date"); }
     return $call; }
 
 function dealer_info($dealer) {
