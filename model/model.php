@@ -28,8 +28,7 @@ function select($id, $table, $where = NULL, $wherearg = NULL,
 
 function update($table, $field, $value, $where, $wherearg, $whereto) {
     global $mysqli;
-    $query = "UPDATE $table SET $field='" . $value .
-        "' WHERE $where $wherearg $whereto";
+    $query = "UPDATE $table SET $field=$value WHERE $where $wherearg $whereto";
     $call = $mysqli->query("$query");
     return $call; }
 
