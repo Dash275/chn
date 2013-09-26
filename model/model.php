@@ -32,4 +32,10 @@ function update($table, $field, $value, $where, $wherearg, $whereto) {
     $call = $mysqli->query("$query");
     return $call; }
 
+function delete($table, $where, $wherearg, $whereto) {
+    global $mysqli;
+    $query = "DELETE FROM $table WHERE $where $wherearg $whereto";
+    $call = $mysqli->query("$query");
+    return $call; }
+
 ?>
