@@ -13,7 +13,7 @@ else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($_POST['dealer'] and $_POST['month']) {
         $dealer = $_POST['dealer'];
         $month = $_POST['month'];
-        $call = dealer_report($dealer, $month);
+        $call = sales_report($dealer, $month);
         $info = dealer_info($dealer);
         $info = $info->fetch_array(MYSQLI_ASSOC);
 
