@@ -23,7 +23,14 @@ function select($id, $table, $where = NULL, $wherearg = NULL,
     if ($order) {
         $query = "$query ORDER BY $order"; }
     $call = $mysqli->query("$query");
-    /* echo $query; */
+    /* echo $query;  <-- Debugging purposes */
+    return $call; }
+
+function update($table, $field, $value, $where, $wherearg, $whereto) {
+    global $mysqli;
+    $query = "UPDATE $table SET $field='" . $value .
+        "' WHERE $where $wherearg $whereto";
+    $call = $mysqli->query("$query");
     return $call; }
 
 ?>
