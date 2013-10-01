@@ -1,6 +1,15 @@
 Cotton House Net
 ================
 
+First Reformation
+-----------------
+
+> This branch is dedicated to reforming the architecture of the project.
+> Current Goals:
+> + Abstraction to Application level model, controller, and view.
+> + Function level MVC files inheriting from Application level files.
+> + Refactoring as much active logic into controllers.
+
 The design goal of this project is to create a PHP interface for a
 database used to track individual seller accounts and items sold,
 and combine them to generate sales reports for each individual seller.
