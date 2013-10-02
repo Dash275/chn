@@ -1,4 +1,4 @@
-<?php include_once "../controller/sales_controller.php" ?>
+<?php include_once "sales_controller.php" ?>
 
 <?php if ($_SERVER['REQUEST_METHOD'] == 'GET') { ?>
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method='POST'>

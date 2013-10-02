@@ -1,4 +1,4 @@
-<?php include_once "../model/model.php" ?>
+<?php include_once "../../application/model.php" ?>
 
 <?php
 
