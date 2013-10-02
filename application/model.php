@@ -1,7 +1,7 @@
 <?php include_once ($_SERVER['DOCUMENT_ROOT'].'/chn/config.php') ?>
 
 <?php
-
+$foo = "foo";
 $mysqli = new mysqli("$host", "$user", "$password", "$database");
 if ($mysqli->connect_errno) {
     echo "Failed to connect to $host: (" . $mysqli->connect_errno . ") " .
@@ -23,7 +23,7 @@ function select($id, $table, $where = NULL, $wherearg = NULL,
     if ($order) {
         $query = "$query ORDER BY $order"; }
     $call = $mysqli->query("$query");
-    /* echo $query;  <-- Debugging purposes */
+    // echo $query . " "; // <-- Debugging purposes
     return $call; }
 
 function update($table, $field, $value, $where, $wherearg, $whereto) {
