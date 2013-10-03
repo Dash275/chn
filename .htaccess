@@ -1,4 +1,11 @@
 RewriteEngine on
+
+#Main Pages
 RewriteRule ^$ index.php
-RewriteRule ^dealer_report$ ./reports/sales/dealer_report.php
 RewriteRule ^version$ version.php
+
+#Table Pages
+RewriteRule ^types$ ./table/types/types_view.php
+
+#Report Pages
+RewriteRule ^dealer_report$ ./reports/sales/dealer_report.php
