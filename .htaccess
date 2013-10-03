@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteRule ^$ index.php
+RewriteRule ^dealer_report$ ./reports/sales/dealer_report.php
+RewriteRule ^version$ version.php
