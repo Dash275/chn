@@ -1,6 +1,6 @@
 <?php include_once "./dealers_model.php"; ?>
 
-<h3>Recently Added Dealers</h3>
+<h3>Dealers and Consignors</h3>
 <table border="1">
   <tr>
     <th>Dealer ID</th>
@@ -13,8 +13,8 @@
 
 <?php
 
-$widget_table = widget_table();
-while ($r = mysqli_fetch_assoc($widget_table))
+$full_table = full_table();
+while ($r = mysqli_fetch_assoc($full_table))
 {
 
 ?>
@@ -29,7 +29,7 @@ while ($r = mysqli_fetch_assoc($widget_table))
     <td><?= $r["dealer_email"] ?></td>
     <td><?= $r["dealer_split"] ?></td>
   </tr>
+
 <?php
 }
 ?>
-</table><br>

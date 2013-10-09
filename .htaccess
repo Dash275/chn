@@ -6,6 +6,8 @@ RewriteRule ^version$ version.php
 
 #Table Pages
 RewriteRule ^types$ ./table/types/types_view.php
+RewriteRule ^dealers$ ./table/dealers/dealers_list.php
+RewriteRule ^dealers/enter$ ./table/dealers/dealer_entry.php
 
 #Report Pages
 RewriteRule ^dealer_report$ ./reports/sales/dealer_report.php
