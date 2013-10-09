@@ -17,6 +17,14 @@ $version[1] = <<<EOV
 -Interface: Created dealer report generator.<br>
 EOV;
 
+$version[2] = <<<EOV
+<b>0.5 ("The Restaurant at the End of the Universe"), 2013-10-09</b><br>
+<i>In the beginning the universe was created. This has made a lot of people very angry and been widely regarded as a bad move.</i><br>
+-Interface: Finished Sales Report generator, although I may go back and change some bits about it later.<br>
+-Interface: Finished Dealer Types table interface. It's probably a bit crowded with four functions on the same page, so I may break those up later.<br>
+-Interface: Begun Dealer Info table interface. I've opted to do like the types interface, where the top of the screen will show latest entries into the database on multiple pages dedicated to different table functions.<br>
+EOV;
+
 foreach (array_reverse($version) as $v) {
     echo "$v<br>"; }
 
