@@ -33,3 +33,10 @@ while ($r = mysqli_fetch_assoc($widget_table))
 }
 ?>
 </table><br>
+
+<b>Tasks:</b>
+<a href="../../dealers">Full List</a>
+<b>///</b><a href="../../dealers/enter">New Dealer</a>
+<b>///</b><a href="../../dealers/update">Update Dealer</a>
+<b>///</b><a href="../../dealers/delete"">Delete Dealer</a>
+<br><br>

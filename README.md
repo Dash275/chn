@@ -28,16 +28,16 @@ including money from sale reserved for dealer.
 The scope of this project may expand over time.
 
 ##Tables Checklist
-###Types
+###~~Types~~
 #####~~Create~~
 #####~~Read~~
 #####~~Update~~
 #####~~Destroy~~
-###Dealers
+###~~Dealers~~
 #####~~Create~~
 #####~~Read~~
-#####Update
-#####Destroy
+#####~~Update~~
+#####~~Destroy~~
 ###Sales
 #####Create
 #####Read

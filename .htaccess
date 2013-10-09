@@ -8,6 +8,8 @@ RewriteRule ^version$ version.php
 RewriteRule ^types$ ./table/types/types_view.php
 RewriteRule ^dealers$ ./table/dealers/dealers_list.php
 RewriteRule ^dealers/enter$ ./table/dealers/dealer_entry.php
+RewriteRule ^dealers/update$ ./table/dealers/dealer_update.php
+RewriteRule ^dealers/delete$ ./table/dealers/dealer_delete.php
 
 #Report Pages
 RewriteRule ^dealer_report$ ./reports/sales/dealer_report.php

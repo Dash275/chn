@@ -43,4 +43,111 @@ function split_find ($type)
      return $result;
 }
 
+function update_initials($id, $initials)
+{
+     $query = "UPDATE dealers
+               SET dealer_initials = '$initials'
+               WHERE dealer_id = '$id'";
+     global $mysqli;
+     $mysqli->query("$query");
+}
+
+function update_id($id, $new_id)
+{
+     $query = "UPDATE dealers
+               SET dealer_id = '$new_id'
+               WHERE dealer_id = '$id'";
+     global $mysqli;
+     $mysqli->query("$query");
+}
+
+function update_type($id, $type)
+{
+     $query = "UPDATE dealers
+               SET dealer_class = '$type'
+               WHERE dealer_id = '$id'";
+     global $mysqli;
+     $mysqli->query("$query");
+}
+
+function update_fname($id, $fname)
+{
+     $query = "UPDATE dealers
+               SET dealer_fname = '$fname'
+               WHERE dealer_id = '$id'";
+     global $mysqli;
+     $mysqli->query("$query");
+}
+
+function update_lname($id, $lname)
+{
+     $query = "UPDATE dealers
+               SET dealer_lname = '$lname'
+               WHERE dealer_id = '$id'";
+     global $mysqli;
+     $mysqli->query("$query");
+}
+
+function update_street($id, $street)
+{
+     $query = "UPDATE dealers
+               SET dealer_street = '$street'
+               WHERE dealer_id = '$id'";
+     global $mysqli;
+     $mysqli->query("$query");
+}
+
+function update_city($id, $city)
+{
+     $query = "UPDATE dealers
+               SET dealer_city = '$city'
+               WHERE dealer_id = '$id'";
+     global $mysqli;
+     $mysqli->query("$query");
+}
+
+function update_state($id, $state)
+{
+     $query = "UPDATE dealers
+               SET dealer_state = '$state'
+               WHERE dealer_id = '$id'";
+     global $mysqli;
+     $mysqli->query("$query");
+}
+
+function update_phone($id, $phone)
+{
+     $query = "UPDATE dealers
+               SET dealer_phone = '$phone'
+               WHERE dealer_id = '$id'";
+     global $mysqli;
+     $mysqli->query("$query");
+}
+
+function update_email($id, $email)
+{
+     $query = "UPDATE dealers
+               SET dealer_email = '$email'
+               WHERE dealer_id = '$id'";
+     global $mysqli;
+     $mysqli->query("$query");
+}
+
+function update_split($id, $split)
+{
+     $query = "UPDATE dealers
+               SET dealer_split = '$split'
+               WHERE dealer_id = '$id'";
+     global $mysqli;
+     $mysqli->query("$query");
+}
+
+function delete_dealer($id)
+{
+     $query = "DELETE FROM dealers
+               WHERE dealer_id = '$id'";
+     global $mysqli;
+     $mysqli->query("$query");
+}
+
 ?>
