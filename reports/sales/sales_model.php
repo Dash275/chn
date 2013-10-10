@@ -12,7 +12,6 @@ function sales_by_dealer($dealer, $month)
               WHERE sold_date LIKE '$month'
               AND dealer_id = '$dealer'
               ORDER BY sold_date";
-    // echo $query;
     global $mysqli;
     $result = $mysqli->query("$query");
     return $result;
@@ -22,7 +21,6 @@ function dealer_call($dealer)
     {
     $query = "SELECT * FROM dealers
               WHERE dealer_id = '$dealer'";
-    // echo $query;
     global $mysqli;
     $result = $mysqli->query("$query");
     return $result;
