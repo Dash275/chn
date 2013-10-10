@@ -14,6 +14,17 @@ function dealer_id_get($num)
      return $dealer;
 }
 
+function split_get($id)
+{
+     $query = "SELECT dealer_split FROM dealers
+               WHERE dealer_id = '$id'";
+     global $mysqli;
+     $split = $mysqli->query("$query");
+     $split = mysqli_fetch_assoc($split);
+     $split = $split['dealer_split'];
+     return $split;
+}
+
 function widget_table()
 {
      $query = "SELECT * FROM sales
@@ -38,6 +49,22 @@ function full_table()
                ORDER BY line_item_id DESC";
      global $mysqli;
      return $mysqli->query("$query");
+}
+
+function new_item($date, $id, $ticket, $stock, $desc, $note, $ask, $sold_for,
+                  $dealer_split, $dealer_earn, $paid_by)
+{
+     $date = date_fix($date);
+     $query = "INSERT INTO sales (sold_date, dealer_id, ticket_number,
+                                 stock_number, item_desc, sale_note, item_ask,
+                                 item_price, dealer_split, dealer_earn,
+                                 paid_by)
+              VALUES ('$date', '$id', '$ticket',
+                      '$stock', '$desc', '$note','$ask',
+                      '$sold_for', '$dealer_split', '$dealer_earn',
+                      '$paid_by')"; 
+    global $mysqli;
+    $mysqli->query("$query");
 }
 
 ?>

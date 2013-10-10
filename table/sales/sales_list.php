@@ -18,14 +18,10 @@
   </tr>
 
 <?php
-$widget_table = widget_table();
-while ($r = mysqli_fetch_assoc($widget_table))
+$sales = full_table();
+while ($r = mysqli_fetch_assoc($sales))
 {
      $r['dealer_full_id'] = dealer_id_get($r['dealer_id']);
-     if (empty($r['dealer_full_id']))
-     {
-          $r['dealer_full_id'] = $r['dealer_id'];
-     }
 ?>
 
   <tr>
