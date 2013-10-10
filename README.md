@@ -39,7 +39,7 @@ The scope of this project may expand over time.
 #####~~Update~~
 #####~~Destroy~~
 ###Sales
-#####Create
-#####Read
+#####~~Create~~
+#####~~Read~~
 #####Update
 #####Destroy
