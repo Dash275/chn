@@ -1,4 +1,3 @@
-<?php // include_once "../../application/model.php" ?>
 <?php include_once 'sales_model.php' ?>
 
 <?php
