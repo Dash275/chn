@@ -27,19 +27,6 @@ including money from sale reserved for dealer.
 
 The scope of this project may expand over time.
 
-##Tables Checklist
-###~~Types~~
-#####~~Create~~
-#####~~Read~~
-#####~~Update~~
-#####~~Destroy~~
-###~~Dealers~~
-#####~~Create~~
-#####~~Read~~
-#####~~Update~~
-#####~~Destroy~~
-###Sales
-#####~~Create~~
-#####~~Read~~
-#####Update
-#####Destroy
+##Checklist
+#####Sales Report (New Logic)
+#####Navigation Pages / System
