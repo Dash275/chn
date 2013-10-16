@@ -1,6 +1,6 @@
 <?php include_once "./sales_model.php"; ?>
 
-<h3>Recent Line Items</h3>
+<h3>All Line Items</h3>
 <table border="1">
   <tr>
     <th>Line Item</th>

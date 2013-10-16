@@ -47,3 +47,10 @@ while ($r = mysqli_fetch_assoc($widget_table))
 }
 ?>
 </table><br>
+
+<b>Tasks:</b>
+<a href="../../sales">Full List</a>
+<b>///</b><a href="../../sales/enter">New Line Item</a>
+<b>///</b><a href="../../sales/update">Update Line Item</a>
+<b>///</b><a href="../../sales/delete">Delete Line Item</a>
+<br><br>

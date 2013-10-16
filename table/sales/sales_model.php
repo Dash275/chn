@@ -67,4 +67,31 @@ function new_item($date, $id, $ticket, $stock, $desc, $note, $ask, $sold_for,
     $mysqli->query("$query");
 }
 
+function update($line, $column, $value)
+{
+     $query = "UPDATE sales
+               SET $column='$value'
+               WHERE line_item_id='$line'";
+     global $mysqli;
+     $mysqli->query("$query");
+}
+
+function update_date($line, $date)
+{
+     $date = date_fix($date);
+     $query = "UPDATE sales
+               SET sold_date='$date'
+               WHERE line_item_id='$line'";
+     global $mysqli;
+     $mysqli->query("$query");
+}
+
+function delete($line)
+{
+     $query = "DELETE FROM sales
+               WHERE line_item_id='$line'";
+     global $mysqli;
+     $mysqli->query("$query");
+}
+
 ?>
