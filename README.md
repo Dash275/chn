@@ -28,5 +28,5 @@ including money from sale reserved for dealer.
 The scope of this project may expand over time.
 
 ##Checklist
-#####Sales Report (New Logic)
+#####~~Sales Report (New Logic)~~
 #####Navigation Pages / System

@@ -1,4 +1,4 @@
-<?php include_once 'sales_model.php' ?>
+<?php include_once "./sales_model.php" ?>
 
 <?php
 function initialize()

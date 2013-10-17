@@ -14,4 +14,17 @@ function date_fix($date)
      return $date;
 }
 
+function month_fix($month)
+{
+     $month = explode("/", $month);
+     $month = $month[1] . "-" . $month[0] . "-%";
+     return $month;
+}
+
+function year_fix($year)
+{
+     $year = $year . "-%-%";
+     return $year;
+}
+
 ?>

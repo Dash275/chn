@@ -1,4 +1,4 @@
-<?php include_once "sales_controller.php" ?>
+<?php include_once "./sales_controller.php" ?>
 
 <?php
 
@@ -6,9 +6,9 @@ $value = initialize();
     if (!$value) 
         { ?>
             <form action="" method='POST'>
-            Dealer Number:
+            Dealer Number (e.g. 107, 2107):
             <input type="text" name="dealer" /><br />
-            Month:
+            Month (e.g. 12/1970, 08/2000):
             <input type="text" name="month" /><br />
             <input type="submit" name="Generate Report" />
             </form>
@@ -60,5 +60,5 @@ $value = initialize();
             </tr> <?php } ?>
 
         </table>
-
+        <br>
         To dealer: $<?= number_format($to_dealer, 2); } ?>

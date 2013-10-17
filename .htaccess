@@ -2,7 +2,6 @@ RewriteEngine on
 
 #Main Pages
 RewriteRule ^$ index.php
-RewriteRule ^version$ version.php
 
 #Table Pages
 RewriteRule ^types$ ./table/types/types_view.php
@@ -18,4 +17,4 @@ RewriteRule ^sales/update$ ./table/sales/sales_update.php
 RewriteRule ^sales/delete$ ./table/sales/sales_delete.php
 
 #Report Pages
-RewriteRule ^dealer_report$ ./report/sales/dealer_report.php
+RewriteRule ^report/dealer$ ./report/sales/dealer_report.php
